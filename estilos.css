@@ -1,0 +1,157 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Fin General */
+
+/* Body */
+body{
+    background-image: url(./media/fondo.png);
+}
+/* Fin Body */
+
+/* Navbar */
+.navbar{
+    background-color:black;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+/* Fin Navbar */
+
+/* Jumbotron */
+.jumbotron{
+    border-radius: 0;
+    margin-bottom: 0;
+    height:300px;
+    background-image: url(./media/ruta1.jpg);
+    background-size: cover;
+    background-position: top center;
+    animation-name: aparecer;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+   }
+.jumbotron h1{
+    font-size: 275%;
+    font-weight: 5%;
+    text-shadow: 0 0 3px #000;
+}
+.jumbotron h2{
+    font-size: 175%;
+}
+/* Fin Jumbotron */
+
+/* Contenido */
+.content{
+    animation-name: aparecer;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+.section{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.subtitulo{
+    height:60px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: #000;
+    color: white;
+    font-size: 175%;
+    margin-bottom: 0;
+}
+.subtitulo--small{
+    height: 50px;
+    font-size: 150%;
+    margin-top: 40px;
+}
+.parrafo{
+    background-color: white;
+    font-size: 125%;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding-right: 0;
+}
+.parrafo--lista{
+   padding-left: 30px;
+}
+.parrafo--listaUl{
+    list-style: none;
+}
+.productos{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.tarjeta{
+    margin-top: 20px;
+}
+.form{
+    margin: 20px;
+    font-weight: 500;
+}
+.form div label{
+    color: #000;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+.mapa{
+    background-image: url(./media/mapa.jpg);
+    background-size: cover;
+}
+/* Fin Contenido */
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+footer p {
+    line-height: 30px;
+    color: white;
+}
+footer div a {
+    color: white;
+    margin: 3px;
+}
+.icons {
+    font-size: 130%;
+}
+.whatsapp {
+    height: 46px;
+    width: 44px;
+    background-color: #3ec34f;
+    border-radius: 50%;
+}
+.fa-whatsapp{
+    color: white;
+    font-size: 49px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+}
+/* Fin Footer */
+
+/* Animaciones */
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* Fin Animaciones */
