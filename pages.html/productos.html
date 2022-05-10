@@ -11,110 +11,115 @@
     <!-- Link FontAwesome -->
     <script src="https://kit.fontawesome.com/a03e43e7a0.js" crossorigin="anonymous"></script>
     <!-- Link CSS -->
-    <link rel="stylesheet" href="../estilos.css" />
+    <link rel="stylesheet" href="../sass/estilos.css" />
     <title>Productos</title>
 </head>
 
 <body>
-    <!-- Inicio Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Productos</a>
+    <header>
+        <!-- Inicio Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Productos</a>
 
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pedidos.html">¿Cómo realizar tu pedido?</a>
-                </li>
-            </ul>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pedidos.html">¿Cómo realizar tu pedido?</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Fin Navbar -->
+
+        <!-- Inicio Jumbotron -->
+        <div class="jumbotron">
+            <h1>Distribuidora Šturm</h1>
+            <h2>Envases e insumos para panaderías y confiterías</h2>
         </div>
-    </nav>
-    <!-- Fin Navbar -->
-
-    <!-- Inicio Jumbotron -->
-    <div class="jumbotron">
-        <h1>Distribuidora Šturm</h1>
-        <h2>Envases e insumos para panaderías y confiterías</h2>
-    </div>
-    <!-- Fin Jumbotron -->
-
-    <!-- Productos -->
-    <div class="content">
-        <h2 class="subtitulo">Productos</h2>
-        <p class="parrafo container-fluid">Conozca nuestra variedad de productos, para acceder a mas información sobre
-            variedades y listas de
-            precio comuníquese mediante nuestros canales de comunicación para brindarle una asesoría
-            personalizada</p>
-        <section class="row productos">
-            <div class="tarjeta">
-                <div class="card" style="width: 18rem;">
-                    <img src="../media/choco.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Chocolates</h5>
-                        <p class="card-text">Ofrecemos varias líneas de chocolate artesanal:</p>
+        <!-- Fin Jumbotron -->
+    </header>
+    <main>
+        <!-- Productos -->
+        <div class="content">
+            <h2 class="subtitulo">Productos</h2>
+            <p class="parrafo container-fluid">Conozca nuestra variedad de productos, para acceder a mas información
+                sobre
+                variedades y listas de
+                precio comuníquese mediante nuestros canales de comunicación para brindarle una asesoría
+                personalizada</p>
+            <section class="row productos container-fluid">
+                <div class="tarjeta">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../media/choco.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolates</h5>
+                            <p class="card-text">Ofrecemos varias líneas de chocolate artesanal:</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Bombones suizos</li>
+                            <li class="list-group-item">Bombones de licor</li>
+                            <li class="list-group-item">Baños de repostería</li>
+                            <li class="list-group-item">Confituras</li>
+                            <li class="list-group-item">Figuras de Chocolate</li>
+                            <li class="list-group-item">Chocomensajes</li>
+                            <li class="list-group-item">Huevos de Pascua</li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Bombones suizos</li>
-                        <li class="list-group-item">Bombones de licor</li>
-                        <li class="list-group-item">Baños de repostería</li>
-                        <li class="list-group-item">Confituras</li>
-                        <li class="list-group-item">Figuras de Chocolate</li>
-                        <li class="list-group-item">Chocomensajes</li>
-                        <li class="list-group-item">Huevos de Pascua</li>
-                    </ul>
                 </div>
-            </div>
-            <div class="tarjeta">
-                <div class="card" style="width: 18rem;">
-                    <img src="../media/caja.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Envases</h5>
-                        <p class="card-text">Trabajamos con distintas fábricas que nos permiten ofrecer gran variedad de
-                            envases:</p>
+                <div class="tarjeta">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../media/caja.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Envases</h5>
+                            <p class="card-text">Trabajamos con distintas fábricas que nos permiten ofrecer gran
+                                variedad de
+                                envases:</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cajas para bombones</li>
+                            <li class="list-group-item">Bolsas impresas</li>
+                            <li class="list-group-item">Cajas para sandwiches</li>
+                            <li class="list-group-item">Platos para torta</li>
+                            <li class="list-group-item">Cajas para masas</li>
+                            <li class="list-group-item">Bandejas para desayuno</li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cajas para bombones</li>
-                        <li class="list-group-item">Bolsas impresas</li>
-                        <li class="list-group-item">Cajas para sandwiches</li>
-                        <li class="list-group-item">Platos para torta</li>
-                        <li class="list-group-item">Cajas para masas</li>
-                        <li class="list-group-item">Bandejas para desayuno</li>
-                    </ul>
                 </div>
-            </div>
-            <div class="tarjeta">
-                <div class="card" style="width: 18rem;">
-                    <img src="../media/papel.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Papel y servilletas</h5>
-                        <p class="card-text"> El mínimo de compra para papel en bobina es de 10kg. <br>
-                            Para bolsas impresas el mínimo de impresión es de 5000 unidades. <br>
-                            A continuación el detalle de nuestros productos:
-                        </p>
+                <div class="tarjeta">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../media/papel.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Papel y servilletas</h5>
+                            <p class="card-text"> El mínimo de compra para papel en bobina es de 10kg. <br>
+                                Para bolsas impresas el mínimo de impresión es de 5000 unidades. <br>
+                                A continuación el detalle de nuestros productos:
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Papel para envolver</li>
+                            <li class="list-group-item">Servilletas</li>
+                            <li class="list-group-item">Pirotines</li>
+                            <li class="list-group-item">Bolsas impresas</li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Papel para envolver</li>
-                        <li class="list-group-item">Servilletas</li>
-                        <li class="list-group-item">Pirotines</li>
-                        <li class="list-group-item">Bolsas impresas</li>
-                    </ul>
                 </div>
-            </div>
-        </section>
-    </div>
-    <!-- Fin Productos -->
+            </section>
+        </div>
+        <!-- Fin Productos -->
+    </main>
 
     <!-- Footer -->
     <footer>

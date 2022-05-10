@@ -1,0 +1,233 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fin General */
+/* Body */
+body {
+  background-image: url(../media/fondo.png);
+}
+
+/* Fin Body */
+/* Navbar */
+.navbar {
+  background-color: #000;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+/* Fin Navbar */
+/* Jumbotron */
+.jumbotron {
+  border-radius: 0;
+  margin-bottom: 0;
+  height: 300px;
+  background-image: url(../media/ruta1.jpg);
+  background-size: cover;
+  background-position: top center;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.jumbotron h1 {
+  font-size: 275%;
+  font-weight: 5%;
+  text-shadow: 0 0 3px #000;
+}
+
+.jumbotron h2 {
+  font-size: 175%;
+}
+
+/* Fin Jumbotron */
+/* Contenido */
+.content {
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.section {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.subtitulo {
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background-color: #000;
+  color: white;
+  font-size: 175%;
+  margin-bottom: 0;
+}
+
+.subtitulo--small {
+  height: 50px;
+  font-size: 150%;
+  margin-top: 40px;
+}
+
+.parrafo {
+  background-color: white;
+  font-size: 125%;
+  text-align: left;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-right: 0;
+}
+
+.parrafo--lista {
+  padding-left: 30px;
+}
+
+.parrafo--listaUl {
+  list-style: none;
+}
+
+.productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tarjeta {
+  margin-top: 20px;
+}
+
+.form {
+  margin: 20px;
+  font-weight: 500;
+}
+
+.form div label {
+  color: #000;
+  text-shadow: 0 0 2px white;
+}
+
+.pedidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.mapa {
+  width: 40%;
+  height: 40%;
+  background-image: url(../media/mapa.jpg);
+  background-size: cover;
+}
+
+/* Fin Contenido */
+/* Footer */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  height: 80px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+footer p {
+  line-height: 30px;
+  color: white;
+}
+
+footer div a {
+  color: white;
+  margin: 3px;
+}
+
+.icons {
+  font-size: 130%;
+}
+
+.whatsapp {
+  height: 46px;
+  width: 44px;
+  background-color: #3ec34f;
+  border-radius: 50%;
+}
+
+.fa-whatsapp {
+  color: white;
+  font-size: 49px;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+}
+
+/* Fin Footer */
+/* Animaciones */
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fin Animaciones */
+@media only screen and (min-width: 320px) and (max-width: 890px) {
+  #pedidos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
