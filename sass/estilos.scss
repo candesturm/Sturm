@@ -1,6 +1,9 @@
 //Variables
 $negro: #000;
 $blanco: white;
+$naranja:rgb(238, 126, 51);
+$marron: #504835;
+$crema:#d8c5b4;
 $pix20: 20px;
 $pix10: 10px;
 
@@ -27,6 +30,12 @@ body{
     animation-duration: 2s;
     animation-iteration-count: 1;
 }
+.linkActive{
+    color: $naranja !important;
+}
+.navbar-brand:hover, .nav-link:hover{
+    color: $naranja !important;
+}
 /* Fin Navbar */
 
 /* Jumbotron */
@@ -43,7 +52,6 @@ body{
     h1{
         font-size: 275%;
         font-weight: 5%;
-        text-shadow: 0 0 3px $negro;
     }
     h2{
     font-size: 175%;
@@ -52,6 +60,10 @@ body{
 /* Fin Jumbotron */
 
 /* Contenido */
+@mixin valores ($height, $bcolor){
+    height: $height;
+    background-color: $bcolor;
+}
 .content{
     animation-name: aparecer;
     animation-duration: 4s;
@@ -62,10 +74,9 @@ body{
     margin-right: $pix10;
 }
 .subtitulo{
-    height:60px;
+    @include valores(60px, $negro);
     padding-top: $pix10;
     padding-left: $pix20;
-    background-color: $negro;
     color: $blanco;
     font-size: 175%;
     margin-bottom: 0;
@@ -84,6 +95,7 @@ body{
     padding-right: 0;
 }
 .parrafo--lista{
+    @extend .parrafo;
     padding-left: 30px;
 }
 .parrafo--listaUl{
@@ -95,18 +107,83 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.tarjeta{
+.card{
+    width: 26rem; 
+    height: 40rem;
     margin-top: $pix20;
+    background-color: #504835;
+    color: $blanco;
+    border-radius: 0;
+    box-shadow: 5px 5px 17px 0px rgba(43,42,42,0.6);
+}
+.card-title{
+    font-size: 30px;
+}
+.card-body {
+    flex: initial;
+}
+.list-group-item{
+    background-color: #504835;
+    color: $blanco;
+    padding-left: 20px;
+    padding: 7px;
+}
+
+.formulario{
+    margin: 30px;
+    padding: 10px;
+    background-color: #ca7213;
+    height: 100%;
+}
+@mixin formato ($bcolor,$bradius,$border){
+    background-color: $bcolor;
+    border-radius: $bradius;
+    border: $border;
 }
 .form{
     margin: 20px;
     font-weight: 500;
     div{
         label{
-            color: $negro;
-            text-shadow: 0 0 2px $blanco;
+            color: lighten($color: $crema, $amount: 15%);
+            font-size: 20px;
         }
+        input{
+            @include formato($marron,0,0);
+        }
+        input::placeholder{
+            color: rgba(255, 255, 255, 0.699);
+        }
+        select{
+            @include formato($marron,0,0);
+            option{
+                background-color: $marron;
+            }
+            option:hover{
+                background-color: darken($color: $marron, $amount: 5%);
+            }
+        }
+        #exampleFormControlSelect1{
+            @include formato($marron,0,0);
+            color: $crema;
+            transition: none;
+            box-shadow: none;
+        }
+        #exampleFormControlTextarea1{
+            @include formato($marron,0,0)
+        }
+        #exampleFormControlTextarea1::placeholder{
+            color: rgba(255, 255, 255, 0.699);
+        }
+        
     }
+}
+.form-check-input {
+    margin-top: 0.6rem;
+}
+.btn-light{
+    @include formato($crema,0.25,0);
+    box-shadow: 4px 4px 6px 0px rgba(84,83,81,1);
 }
 
 .pedidos{
@@ -123,11 +200,10 @@ body{
 
 /* Footer */
 footer {
+    @include valores(80px, $negro);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $negro;
-    height: 80px;
     margin-top: 50px;
     font-size: $pix20;
     p {
@@ -145,9 +221,8 @@ footer {
     font-size: 130%;
 }
 .whatsapp {
-    height: 46px;
+    @include valores(46px, #3ec34f);
     width: 44px;
-    background-color: #3ec34f;
     border-radius: 50%;
 }
 .fa-whatsapp{
@@ -174,9 +249,65 @@ footer {
 /* Fin Animaciones */
 
 // Media queries
-@media only screen and (min-width:320px) and (max-width:890px){
+@media only screen and (min-width:320px) and (max-width:768px){
+    .jumbotron{ 
+        h1{
+            font-size: 200%;
+        }
+        h2{
+            font-size: 100%;
+        }
+    }
+    .subtitulo{
+        height: 45px;
+        font-size: 120%;
+    }
+    .parrafo{
+        font-size: 100%;
+    }
+    div{
+        label{
+            font-size: 15px;
+        }
+        .btn{
+            font-size: 15px;
+        }
+        input::placeholder, #exampleFormControlSelect1, #exampleFormControlTextarea1{
+            font-size: 12px;
+        }
+    }
+
     #pedidos{
         display:flex;
         flex-direction: column;
+    }
+    footer {
+        font-size: 15px;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        line-height: normal;
+        p{
+            margin: 0;
+        }
+        
+    }
+}
+@media only screen and (min-width:600px) and (max-width:768px){
+    .jumbotron{ 
+        h1{
+            font-size: 250%;
+        }
+        h2{
+            font-size: 150%;
+        }
+    }
+    div{
+        label{
+            font-size: 20px;
+        }
+        input::placeholder, #exampleFormControlSelect1, #exampleFormControlTextarea1{
+            font-size: 15px;
+        }
     }
 }

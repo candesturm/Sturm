@@ -26,6 +26,14 @@ body {
           animation-iteration-count: 1;
 }
 
+.linkActive {
+  color: #ee7e33 !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #ee7e33 !important;
+}
+
 /* Fin Navbar */
 /* Jumbotron */
 .jumbotron {
@@ -46,7 +54,6 @@ body {
 .jumbotron h1 {
   font-size: 275%;
   font-weight: 5%;
-  text-shadow: 0 0 3px #000;
 }
 
 .jumbotron h2 {
@@ -71,9 +78,9 @@ body {
 
 .subtitulo {
   height: 60px;
+  background-color: #000;
   padding-top: 10px;
   padding-left: 20px;
-  background-color: #000;
   color: white;
   font-size: 175%;
   margin-bottom: 0;
@@ -85,7 +92,7 @@ body {
   margin-top: 40px;
 }
 
-.parrafo {
+.parrafo, .parrafo--lista {
   background-color: white;
   font-size: 125%;
   text-align: left;
@@ -116,8 +123,39 @@ body {
       justify-content: space-around;
 }
 
-.tarjeta {
+.card {
+  width: 26rem;
+  height: 40rem;
   margin-top: 20px;
+  background-color: #504835;
+  color: white;
+  border-radius: 0;
+  -webkit-box-shadow: 5px 5px 17px 0px rgba(43, 42, 42, 0.6);
+          box-shadow: 5px 5px 17px 0px rgba(43, 42, 42, 0.6);
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.card-body {
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+}
+
+.list-group-item {
+  background-color: #504835;
+  color: white;
+  padding-left: 20px;
+  padding: 7px;
+}
+
+.formulario {
+  margin: 30px;
+  padding: 10px;
+  background-color: #ca7213;
+  height: 100%;
 }
 
 .form {
@@ -126,8 +164,89 @@ body {
 }
 
 .form div label {
-  color: #000;
-  text-shadow: 0 0 2px white;
+  color: #f2ece6;
+  font-size: 20px;
+}
+
+.form div input {
+  background-color: #504835;
+  border-radius: 0;
+  border: 0;
+}
+
+.form div input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div input::placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div select {
+  background-color: #504835;
+  border-radius: 0;
+  border: 0;
+}
+
+.form div select option {
+  background-color: #504835;
+}
+
+.form div select option:hover {
+  background-color: #413a2b;
+}
+
+.form div #exampleFormControlSelect1 {
+  background-color: #504835;
+  border-radius: 0;
+  border: 0;
+  color: #d8c5b4;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form div #exampleFormControlTextarea1 {
+  background-color: #504835;
+  border-radius: 0;
+  border: 0;
+}
+
+.form div #exampleFormControlTextarea1::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div #exampleFormControlTextarea1:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div #exampleFormControlTextarea1::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form div #exampleFormControlTextarea1::placeholder {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.form-check-input {
+  margin-top: 0.6rem;
+}
+
+.btn-light {
+  background-color: #d8c5b4;
+  border-radius: 0.25;
+  border: 0;
+  -webkit-box-shadow: 4px 4px 6px 0px #545351;
+          box-shadow: 4px 4px 6px 0px #545351;
 }
 
 .pedidos {
@@ -150,6 +269,8 @@ body {
 /* Fin Contenido */
 /* Footer */
 footer {
+  height: 80px;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,8 +279,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000;
-  height: 80px;
   margin-top: 50px;
   font-size: 20px;
 }
@@ -180,8 +299,8 @@ footer div a {
 
 .whatsapp {
   height: 46px;
-  width: 44px;
   background-color: #3ec34f;
+  width: 44px;
   border-radius: 50%;
 }
 
@@ -219,7 +338,38 @@ footer div a {
 }
 
 /* Fin Animaciones */
-@media only screen and (min-width: 320px) and (max-width: 890px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 200%;
+  }
+  .jumbotron h2 {
+    font-size: 100%;
+  }
+  .subtitulo {
+    height: 45px;
+    font-size: 120%;
+  }
+  .parrafo, .parrafo--lista {
+    font-size: 100%;
+  }
+  div label {
+    font-size: 15px;
+  }
+  div .btn {
+    font-size: 15px;
+  }
+  div input::-webkit-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 12px;
+  }
+  div input:-ms-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 12px;
+  }
+  div input::-ms-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 12px;
+  }
+  div input::placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 12px;
+  }
   #pedidos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,6 +378,47 @@ footer div a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  footer {
+    font-size: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: normal;
+  }
+  footer p {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 250%;
+  }
+  .jumbotron h2 {
+    font-size: 150%;
+  }
+  div label {
+    font-size: 20px;
+  }
+  div input::-webkit-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 15px;
+  }
+  div input:-ms-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 15px;
+  }
+  div input::-ms-input-placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 15px;
+  }
+  div input::placeholder, div #exampleFormControlSelect1, div #exampleFormControlTextarea1 {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
